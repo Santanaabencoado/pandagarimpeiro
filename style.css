@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #f3f7fb;
   --surface: #ffffff;
   --surface-soft: #edf3ff;
@@ -388,8 +388,8 @@ main {
 .products-grid {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 .product-card {
@@ -765,4 +765,53 @@ main {
     opacity: 1;
     transform: none;
   }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.3);
+}
+
+.product-content {
+  padding: 10px;
+}
+
+.product-title {
+  font-size: 0.9rem;
+}
+
+.product-link {
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+.fake-stats {
+  font-size: 0.75rem;
+  color: #ff5b2e;
+  font-weight: 700;
+}
+
+.fake-sold {
+  font-size: 0.75rem;
+  color: #2e7d32;
+  font-weight: 700;
 }
