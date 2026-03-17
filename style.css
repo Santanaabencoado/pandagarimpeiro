@@ -769,7 +769,7 @@ main {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: max(20px, env(safe-area-inset-bottom + 20px)); 
   right: 20px;
   width: 56px;
   height: 56px;
@@ -782,7 +782,7 @@ main {
   font-size: 24px;
   text-decoration: none;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  z-index: 999;
+  z-index: 9999; 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -815,3 +815,34 @@ main {
   color: #2e7d32;
   font-weight: 700;
 }
+
+@media (max-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important; 
+  }
+  
+  .product-content {
+    padding: 8px !important;
+    gap: 6px !important;
+  }
+  
+  .product-title {
+    font-size: 0.85rem !important;
+    line-height: 1.2;
+  }
+  
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  
+  .price {
+    font-size: 0.95rem !important;
+  }
+  
+  .product-link {
+    font-size: 0.75rem !important;
+    padding: 6px !important;
+  }
