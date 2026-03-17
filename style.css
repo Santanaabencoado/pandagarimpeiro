@@ -768,31 +768,26 @@ main {
 }
 
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px; 
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999; 
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: fixed !important;
+  bottom: 40px !important;
+  right: 20px !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background: #25d366 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2147483647 !important; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+  transition: transform 0.2s ease !important;
 }
 
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
+@media (max-width: 768px) {
   .whatsapp-float {
-    bottom: calc(20px + env(safe-area-inset-bottom));
+    bottom: 90px !important; /* Se ainda ficar escondido, mude esse 90px para 100px ou 110px */
+    right: 15px !important;
   }
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.3);
 }
 
 .product-content {
